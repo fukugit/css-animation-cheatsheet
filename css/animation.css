@@ -1,0 +1,13 @@
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: #F4989C;
+  cursor: pointer;
+}
+.box1-animation {
+  transition-property: border-radius;
+  transition-duration: 1s;
+}
+.box1-animation-add {
+  border-radius: 50%;
+}

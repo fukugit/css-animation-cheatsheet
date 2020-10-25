@@ -1,0 +1,57 @@
+/* body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+} */
+
+/* 画面に枠線を付けます。 */
+html:before,
+html:after,
+body:before,
+body:after {
+  content: "";
+  background: #2ecc71;
+  position: fixed;
+  display: block;
+  z-index: 1;
+}
+
+/* 上 */
+html:before {
+  height: 10px; 
+  width: 100vw;
+  left: 0;
+  top: 0;
+}
+
+/* 右 */
+html:after {
+  width: 10px;
+  height: 100vh;
+  right: 0;
+  top: 0;
+}
+
+/* 下 */
+body:before {
+  height: 10px;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+}
+
+/* 左 */
+body:after {
+  width: 10px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.main {
+  min-height: 100vh; 
+  min-width: 1000;
+  background: #ecf0f1;
+}
+.wrapper {
+  padding: 20px;
+}
