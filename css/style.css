@@ -12,7 +12,8 @@ html:after,
 body:before,
 body:after {
   content: "";
-  background: #2ecc71;
+  /* background: #2ecc71; */
+  background: #3aacad;
   position: fixed;
   display: block;
   z-index: 1;
@@ -65,9 +66,10 @@ main {
   padding: 20px;
 }
 .container {
-  min-width: 70%;
+  min-width: 90%;
   min-height: 90%; 
-  background: #3aacad;
+  /* background: #3aacad; */
+  /* background: whitesmoke; */
   margin: 150px;
 }
 
@@ -81,12 +83,19 @@ main {
 .grid .item {
   width: 200px;
   height: 200px;
-  background: whitesmoke;
-  opacity: .3;
+  /* background: whitesmoke; */
+  background: #3aacad;
+  opacity: .6;
   cursor: pointer;
 }
 .grid .item:hover {
   opacity: 1;
+}
+.grid .big-item {
+  width: 420px;
+  height: 420px;
+  grid-column: 1 /3;
+  grid-row: 1 / 3;
 }
 /* Gridの設定 end */
 
@@ -102,6 +111,8 @@ main {
   text-align: center;
   padding: 64px;
   opacity: 0; /* 非表示 */
+  transform: translateY(20px);
+  transition: opacity .3s, transform .3s;
   pointer-events: none; /* ポップアップを非表示にした後で、後ろの文字が選択できるようにします。 */
   transition: opacity .6s;
 }
@@ -130,17 +141,17 @@ main {
 .overlay.show .overlay-container .box {
   opacity: 1;
   transform: none;
-  transition-delay: .2s;
+  transition-delay: .4s;
 }
 .overlay.show .overlay-container .code1 {
   opacity: 1;
   transform: none;
-  transition-delay: .4s;
+  transition-delay: .6s;
 }
 .overlay.show .overlay-container .code2 {
   opacity: 1;
   transform: none;
-  transition-delay: .6s;
+  transition-delay: .8s;
 }
 .overlay #close {
   position: absolute;
@@ -152,6 +163,8 @@ main {
 .overlay.show {
   opacity: 1;
   pointer-events: auto;
+  transform: none;
+  transition-delay: .2s;
 }
 .overlay .overlay-container {
   margin: auto;
