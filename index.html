@@ -5,13 +5,40 @@
   <title>CSS Animation Cheat Sheet</title>
   <!-- デフォルトCSS -->
   <link rel="stylesheet" href="https://unpkg.com/ress@2.0.4/dist/ress.min.css">
+  <!-- highlightjsのデフォルトCSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/styles/default.min.css">
+  <!-- google material icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
   
 </head>
 <body>
-  <div class="main">
-    <div class="header wrapper">
+  <main>
+    <div class="container wrapper grid">
+      <div id="box1" class="item big-box">
+        <div class="box1-thumbnail box1"></div>
+      </div>
+      <div id="box2" class="item big-box">
+        <div class="box2"></div>
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+    </div>
+
+    <!-- <div class="header wrapper">
       <select name="example">
         <option value="サンプル1">サンプル1</option>
         <option value="サンプル2">サンプル2</option>
@@ -20,25 +47,69 @@
       <div id="box1" class="box1 box1-animation"></div>
     </div>
     <div class="explanation wrapper">
-      <pre>
-        <code>
-         function $initHighlight(block, cls) {
-           try {
-             if (cls.search(/\bno\-highlight\b/) != -1)
-               return process(block, true, 0x0F) + 
-                  ' class=""';
-           } catch (e) {
-           /* handle exception */
-           }
-           for (var i = 0 / 2; i < classes.length; i++) {
-             if (checkCondition(classes[i]) === undefined)
-               return /\d+[\s/]/g;
-           }
-         }
-        </code>
-       </pre>
-    </div>
+      <pre><code class="css">
+        .box {
+            width: 100px;
+            height: 100px;
+            transition-property: border-radius;
+            transition-duration: 1s;
+            border-radius: 50%;
+        }
+      </code></pre>
+    </div> -->
+  </main> <!-- main -->
+
+  <div class="overlay">
+    <span class="material-icons" id="close">close</span>
+    <nav class="overlay-container">
+      <div class="box">
+        <div class="box1-main box1"></div>
+      </div>
+      <div class="code1 explanation">
+        <div class="title">Using transition</div>
+        <pre><code class="css">
+          .box {
+            width: 200px;
+            height: 200px;
+            background: #F4989C
+            transition-property: border-radius;
+            transition-duration: 2s
+            border-radius: 50%;
+          }
+        </code></pre>
+      </div>
+      <div class="code2 explanation">
+        <div class="title">Using animation</div>
+        <pre><code class="css">
+          .box {
+            width: 200px;
+            height: 200px;
+            background: #F4989C;
+            border-radius: 5%;
+            animation-name: box-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+          }
+
+          @keyframes box-animation {
+            0% {
+              transform: none;
+            }
+            100% {
+              border-radius: 50%;
+            }
+          }
+        </code></pre>
+      </div>
+      <!-- <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+      </ul> -->
+    </nav>
   </div>
+
+
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 </body>

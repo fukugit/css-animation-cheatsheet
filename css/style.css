@@ -2,6 +2,9 @@
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
 } */
+body {
+  max-height: 100vh;
+}
 
 /* 画面に枠線を付けます。 */
 html:before,
@@ -46,12 +49,123 @@ body:after {
   top: 0;
   left: 0;
 }
+/* 枠線 end */
 
-.main {
-  min-height: 100vh; 
-  min-width: 1000;
-  background: #ecf0f1;
+main {
+  /* min-height: 100vh;  */
+  min-width: 90%;
+  background: #fff;
+
+  /* mainの中は上下左右中央揃えにします。 */
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 .wrapper {
   padding: 20px;
 }
+.container {
+  min-width: 70%;
+  min-height: 90%; 
+  background: #3aacad;
+  margin: 150px;
+}
+
+/* Gridの設定 */
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  /* grid-template-rows: 200px 200px; */
+}
+.grid .item {
+  width: 200px;
+  height: 200px;
+  background: whitesmoke;
+  opacity: .3;
+  cursor: pointer;
+}
+.grid .item:hover {
+  opacity: 1;
+}
+/* Gridの設定 end */
+
+/* ポップアップ画面 */
+.overlay {
+  position: fixed;
+  top: 5%;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  /* background: rgba(255, 255, 255, 0.95); */
+  background: #3aacad;
+  text-align: center;
+  padding: 64px;
+  opacity: 0; /* 非表示 */
+  pointer-events: none; /* ポップアップを非表示にした後で、後ろの文字が選択できるようにします。 */
+  transition: opacity .6s;
+}
+.overlay .overlay-container {
+  margin: 0;
+  padding: 0;
+}
+.overlay .overlay-container .box {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+.overlay .overlay-container .code1 {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+.overlay .overlay-container .code2 {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+.overlay.show .overlay-container .box {
+  opacity: 1;
+  transform: none;
+  transition-delay: .2s;
+}
+.overlay.show .overlay-container .code1 {
+  opacity: 1;
+  transform: none;
+  transition-delay: .4s;
+}
+.overlay.show .overlay-container .code2 {
+  opacity: 1;
+  transform: none;
+  transition-delay: .6s;
+}
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay .overlay-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.overlay .explanation {
+  text-align: left;
+}
+
+.overlay .title {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  padding: 0, 0, 30px, 0;
+}
+/* ポップアップ画面 end */
