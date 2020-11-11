@@ -10,11 +10,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/solarized-dark.min.css">
   <!-- google material icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animation.css">
+
   
 </head>
 <body>
+  <header>
+    <h1>CSS Animation Cheat Sheet</h1>
+  </header>
   <main>
     <div class="container wrapper grid">
       <div id="box1" class="item big-item">
@@ -53,8 +59,8 @@
 
   </main> <!-- main -->
 
-  <div class="overlay">
-    <span class="material-icons" id="close">close</span>
+  <div id="overlay1" class="overlay">
+    <span class="material-icons close" id="close1">close</span>
     <nav class="overlay-container">
       <div class="box">
         <div class="box1-main box1">.box</div>
@@ -98,8 +104,52 @@
     </nav>
   </div>
 
+  <div id="overlay2" class="overlay">
+    <span class="material-icons close" id="close2">close</span>
+    <nav class="overlay-container">
+      <div class="box">
+        <div class="box1-main box1">.box</div>
+      </div>
+      <div class="code1 explanation">
+        <div class="title">Usage transition</div>
+        <pre><code class="css">
+          .box {
+            width: 200px;
+            height: 200px;
+            background: #F4989C
+            transition-property: border-radius;
+            transition-duration: 2s
+            border-radius: 50%;
+          }
+        </code></pre>
+      </div>
+      <div class="code2 explanation">
+        <div class="title">Usage animation</div>
+        <pre><code class="css">
+          .box {
+            width: 200px;
+            height: 200px;
+            background: #F4989C;
+            border-radius: 5%;
+            animation-name: box-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+          }
+
+          @keyframes box-animation {
+            0% {
+              transform: none;
+            }
+            100% {
+              border-radius: 50%;
+            }
+          }
+        </code></pre>
+      </div>
+    </nav>
+  </div>
 
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js"></script>
-  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/bundle.js"></script>
 </body>
 </html>

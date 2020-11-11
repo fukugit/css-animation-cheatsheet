@@ -10,7 +10,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  background: #ea4060;
+  background: #F4989C;
   top: 0;
   right: 0;
   bottom: 0;
@@ -18,8 +18,8 @@
   margin: auto;
 }
 .box1-main {
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
   background: #F4989C;
   text-align: center;
   line-height: 200px;

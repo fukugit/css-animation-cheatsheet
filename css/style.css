@@ -12,8 +12,7 @@ html:after,
 body:before,
 body:after {
   content: "";
-  /* background: #2ecc71; */
-  background: #3aacad;
+  background: #F4989C;
   position: fixed;
   display: block;
   z-index: 1;
@@ -21,7 +20,7 @@ body:after {
 
 /* 上 */
 html:before {
-  height: 10px; 
+  height: 5px; 
   width: 100vw;
   left: 0;
   top: 0;
@@ -29,7 +28,7 @@ html:before {
 
 /* 右 */
 html:after {
-  width: 10px;
+  width: 5px;
   height: 100vh;
   right: 0;
   top: 0;
@@ -37,7 +36,7 @@ html:after {
 
 /* 下 */
 body:before {
-  height: 10px;
+  height: 5px;
   width: 100vw;
   bottom: 0;
   left: 0;
@@ -45,13 +44,23 @@ body:before {
 
 /* 左 */
 body:after {
-  width: 10px;
+  width: 5px;
   height: 100vh;
   top: 0;
   left: 0;
 }
 /* 枠線 end */
 
+header {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+body {
+  font-family: 'Roboto Slab', serif;
+}
+h1 {
+  color: #686464d5;
+}
 main {
   /* min-height: 100vh;  */
   min-width: 1000px;
@@ -153,7 +162,7 @@ main {
   transform: none;
   transition-delay: .8s;
 }
-.overlay #close {
+.overlay .close {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -169,10 +178,29 @@ main {
 .overlay .overlay-container {
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* 開始位置を配置。中央揃え*/
+  align-items: center; /* 親要素の開始位置から配置。上揃え。*/
 }
-.overlay .explanation {
+.overlay .overlay-container .explanation {
   text-align: left;
+}
+
+.overlay .overlay-container .box {
+  min-width: 210px;
+  height: 600px;
+  margin: 0 20px 0 0;
+}
+.overlay .overlay-container .code1 {
+  /* width: 30%; */
+  width: 500px;
+  height: 600px;
+  margin: 0 20px 0 0;
+}
+.overlay .overlay-container .code2 {
+  /* width: 30%; */
+  width: 500px;
+  height: 600px;
+  margin: 0 20px 0 0;
 }
 
 .overlay .title {
@@ -180,5 +208,6 @@ main {
   color: #ffffff;
   text-align: left;
   padding: 0, 0, 30px, 0;
+  margin-bottom: 30px;
 }
 /* ポップアップ画面 end */
