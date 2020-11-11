@@ -2,4 +2,4 @@
 CSSアニメーションのチートシートです。
 
 ## Demo
-[demo](https://fukugit.github.io/css-animation-cheatsheet/index.html)
+[demo](https://fukugit.github.io/css-animation-cheatsheet/)
