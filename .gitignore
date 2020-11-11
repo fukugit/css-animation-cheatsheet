@@ -104,6 +104,6 @@ dist
 .tern-port
 
 # Built js files.
-/js/bundle.js
+# /js/bundle.js
 
 .vscode/
