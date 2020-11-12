@@ -38,6 +38,15 @@
     border-radius: 50%;
   }
 }
+.box1-transition {
+  cursor: pointer;
+  transition-property: border-radius;
+  transition-duration: 1s;
+}
+.box1-transition-animation {
+  border-radius: 50%;
+}
+
 
 #box2 {
   position: relative;
