@@ -52,8 +52,16 @@ body:after {
 /* 枠線 end */
 
 header {
-  margin-top: 50px;
-  margin-left: 100px;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  /* margin-top: 50px; */
+  /* margin-left: 100px; */
+  /* margin-bottom: 100px; */
+}
+header .menu {
+  margin-right: 100px;
 }
 body {
   font-family: 'Roboto Slab', serif;
@@ -79,7 +87,7 @@ main {
   min-height: 90%; 
   /* background: #3aacad; */
   /* background: whitesmoke; */
-  margin: 150px;
+  /* margin: 150px; */
 }
 
 /* Gridの設定 */
@@ -125,43 +133,26 @@ main {
   pointer-events: none; /* ポップアップを非表示にした後で、後ろの文字が選択できるようにします。 */
   transition: opacity .6s;
 }
-.overlay .overlay-container {
+/* .overlay .overlay-container {
   margin: 0;
   padding: 0;
-}
-.overlay .overlay-container .box {
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
-}
-.overlay .overlay-container .code1 {
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
-}
-.overlay .overlay-container .code2 {
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
-}
+} */
+
 .overlay.show .overlay-container .box {
   opacity: 1;
   transform: none;
   transition-delay: .4s;
 }
-.overlay.show .overlay-container .code1 {
+.overlay.show .overlay-container .codebox {
   opacity: 1;
   transform: none;
   transition-delay: .6s;
 }
-.overlay.show .overlay-container .code2 {
+/* .overlay.show .overlay-container .code2 {
   opacity: 1;
   transform: none;
   transition-delay: .8s;
-}
+} */
 .overlay .close {
   position: absolute;
   top: 16px;
@@ -180,34 +171,66 @@ main {
   display: flex;
   justify-content: center; /* 開始位置を配置。中央揃え*/
   align-items: center; /* 親要素の開始位置から配置。上揃え。*/
+  margin-bottom: 50px;
 }
+.overlay .overlay-container .box {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  min-width: 210px;
+  height: 400px;
+  margin: 0 20px 0 0;
+}
+.overlay .overlay-container .codebox {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  width: 500px;
+  height: 400px;
+  margin: 0 20px 0 0
+}
+/* .overlay .overlay-container .code2 {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  width: 500px;
+  height: 400px;
+  margin: 0 20px 0 0;
+} */
 .overlay .overlay-container .explanation {
   text-align: left;
 }
-
-.overlay .overlay-container .box {
+.overlay .overlay-container .code-format {
+  height: 400px;
+}
+/* .overlay .overlay-container .box {
   min-width: 210px;
   height: 600px;
   margin: 0 20px 0 0;
-}
-.overlay .overlay-container .code1 {
-  /* width: 30%; */
+} */
+/* .overlay .overlay-container .code1 {
   width: 500px;
   height: 600px;
   margin: 0 20px 0 0;
-}
-.overlay .overlay-container .code2 {
-  /* width: 30%; */
+} */
+/* .overlay .overlay-container .code2 {
   width: 500px;
   height: 600px;
   margin: 0 20px 0 0;
-}
+} */
 
 .overlay .title {
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
-  padding: 0, 0, 30px, 0;
-  margin-bottom: 30px;
+  padding: 0, 0, 0, 0;
+  margin-left: 80px;
+  margin-bottom: 20px;
 }
 /* ポップアップ画面 end */
