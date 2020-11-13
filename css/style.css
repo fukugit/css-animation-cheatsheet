@@ -173,6 +173,7 @@ main {
   align-items: center; /* 親要素の開始位置から配置。上揃え。*/
   margin-bottom: 50px;
 }
+
 .overlay .overlay-container .box {
   margin-top: 24px;
   opacity: 0;
@@ -193,6 +194,7 @@ main {
   height: 400px;
   margin: 0 20px 0 0
 }
+
 /* .overlay .overlay-container .code2 {
   margin-top: 24px;
   opacity: 0;
@@ -229,8 +231,10 @@ main {
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
-  padding: 0, 0, 0, 0;
-  margin-left: 80px;
-  margin-bottom: 20px;
+  width: 40%;
+  height: 80px;
+  margin: 10px auto;
+  /* margin-left: 80px; */
+  /* margin-bottom: 20px; */
 }
 /* ポップアップ画面 end */
