@@ -65,44 +65,46 @@
   <div id="overlay1" class="overlay">
     <span class="material-icons close" id="close1">close</span>
     <nav>
-      <div class="title">Usage of Animation</div>
-      <div class="overlay-container">
-        <div class="box">
-          <div class="box1-main box1">.box</div>
-        </div>
-        <div class="codebox explanation">
-          <pre><code class="css code-format">
-            .box {
-              border-radius: 5%;
-              animation-name: box-animation;
-              animation-duration: 2s;
-              animation-iteration-count: infinite;
-            }
-  
-            @keyframes box-animation {
-              0% {
-                transform: none;
+      <div class="overlay-layout">
+        <div class="title">Usage of Animation</div>
+        <div class="overlay-container">
+          <div class="box">
+            <div class="box1-main box1">.box</div>
+          </div>
+          <div class="codebox explanation">
+            <pre><code class="css code-format">
+              .box {
+                border-radius: 5%;
+                animation-name: box-animation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
               }
-              100% {
+    
+              @keyframes box-animation {
+                0% {
+                  transform: none;
+                }
+                100% {
+                  border-radius: 50%;
+                }
+              }
+            </code></pre>
+          </div>
+        </div>
+        <div class="title">Usage of Transition</div>
+        <div class="overlay-container">
+          <div class="box">
+            <div class="box1-main box1-transition" id="box1-main">click here!</div>
+          </div>
+          <div class="codebox explanation">
+            <pre><code class="css code-format">
+              .box {
+                transition-property: border-radius;
+                transition-duration: 2s
                 border-radius: 50%;
               }
-            }
-          </code></pre>
-        </div>
-      </div>
-      <div class="title">Usage of Transition</div>
-      <div class="overlay-container">
-        <div class="box">
-          <div class="box1-main box1-transition" id="box1-main">click here!</div>
-        </div>
-        <div class="codebox explanation">
-          <pre><code class="css code-format">
-            .box {
-              transition-property: border-radius;
-              transition-duration: 2s
-              border-radius: 50%;
-            }
-          </code></pre>
+            </code></pre>
+          </div>
         </div>
       </div>
     </nav>

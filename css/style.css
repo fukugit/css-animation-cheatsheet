@@ -138,10 +138,46 @@ main {
   padding: 0;
 } */
 
+.overlay .overlay-layout {
+  margin: 10px auto;
+  max-width: 900px;
+}
+
+.overlay .title {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: left;
+  height: 80px;
+  margin: 10px 10px;
+  /* margin-left: 80px; */
+  /* margin-bottom: 20px; */
+}
+
+.overlay .overlay-container .box {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  min-width: 210px;
+  height: 400px;
+  margin: 0 20px 0 0;
+}
 .overlay.show .overlay-container .box {
   opacity: 1;
   transform: none;
   transition-delay: .4s;
+}
+
+.overlay .overlay-container .codebox {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  width: 500px;
+  height: 400px;
+  margin: 0 20px 0 0
 }
 .overlay.show .overlay-container .codebox {
   opacity: 1;
@@ -174,26 +210,8 @@ main {
   margin-bottom: 50px;
 }
 
-.overlay .overlay-container .box {
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
 
-  min-width: 210px;
-  height: 400px;
-  margin: 0 20px 0 0;
-}
-.overlay .overlay-container .codebox {
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
 
-  width: 500px;
-  height: 400px;
-  margin: 0 20px 0 0
-}
 
 /* .overlay .overlay-container .code2 {
   margin-top: 24px;
@@ -227,14 +245,5 @@ main {
   margin: 0 20px 0 0;
 } */
 
-.overlay .title {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: left;
-  width: 40%;
-  height: 80px;
-  margin: 10px auto;
-  /* margin-left: 80px; */
-  /* margin-bottom: 20px; */
-}
+
 /* ポップアップ画面 end */
