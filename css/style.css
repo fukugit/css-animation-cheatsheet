@@ -163,6 +163,34 @@ main {
   height: 400px;
   margin: 0 20px 0 0;
 }
+.overlay .overlay-container .box .box-click {
+  position: relative;
+}
+.overlay .overlay-container .box .box-click .click-here {
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  top: 30px;
+  left: 50px;
+  background: #fff;
+  width: 100px;
+  height: 50px;
+  border-radius: 8%;
+  user-select: none;
+  animation-name: click-here-animation;
+  animation-duration: .4s;
+  animation-iteration-count: infinite
+}
+@keyframes click-here-animation {
+  0% {
+    opacity: .3;
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: .7;
+  }
+}
 .overlay.show .overlay-container .box {
   opacity: 1;
   transform: none;

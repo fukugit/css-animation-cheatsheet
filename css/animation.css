@@ -16,6 +16,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  user-select: none;
 }
 .box1-main {
   max-width: 200px;
@@ -23,6 +24,7 @@
   background: #F4989C;
   text-align: center;
   line-height: 200px;
+  user-select: none;
 }
 .box1 {
   border-radius: 5%;
@@ -51,7 +53,7 @@
 #box2 {
   position: relative;
 }
-.box2 {
+.box2-thumbnail {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -61,10 +63,32 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  user-select: none;
+
+  /* border-radius: 5%;
+  animation-name: box2-animation1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite */
+}
+.box2 {
   border-radius: 5%;
   animation-name: box2-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+.box2-main {
+  margin-top: 100px;
+  max-width: 50px;
+  max-height: 50px;
+  background: #F4989C;
+  text-align: center;
+  line-height: 50px;
+  user-select: none;
+
+  /* border-radius: 5%;
+  animation-name: box2-animation2;
+  animation-duration: 2s;
+  animation-iteration-count: infinite */
 }
 @keyframes box2-animation {
   0% {
@@ -74,7 +98,14 @@
     transform: translate(30px, 30px);
   }
 }
-
+.box2-transition {
+  cursor: pointer;
+  transition-property: border-radius;
+  transition-duration: 1s;
+}
+.box2-transition-animation {
+  border-radius: 50%;
+}
 
 /* .box1-animation {
   transition-property: border-radius;
