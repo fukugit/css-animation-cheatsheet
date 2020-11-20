@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="https://unpkg.com/ress@2.0.4/dist/ress.min.css">
   <!-- highlightjsのデフォルトCSS -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/styles/default.min.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/solarized-dark.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/solarized-dark.min.css"> -->
+  <!-- 一覧 https://cdnjs.com/libraries/highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.5/styles/atom-one-light.min.css">
   <!-- google material icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- google fonts -->
@@ -30,7 +32,7 @@
         <div class="box1-thumbnail box1"></div>
       </div>
       <div id="box2" class="item">
-        <div class="box2"></div>
+        <div class="box2-thumbnail"></div>
       </div>
       <div class="item">
       </div>
@@ -66,10 +68,11 @@
     <span class="material-icons close" id="close1">close</span>
     <nav>
       <div class="overlay-layout">
-        <div class="title">Usage of Animation</div>
+        <div class="title">Animation, which works as loop.</div>
         <div class="overlay-container">
+          <div class="click-here" id="click-here1-anime">click</div>
           <div class="box">
-            <div class="box1-main box1">.box</div>
+            <div class="box1-main" id="box1-main-anime">.box</div>
           </div>
           <div class="codebox explanation">
             <pre><code class="css code-format">
@@ -91,10 +94,13 @@
             </code></pre>
           </div>
         </div>
-        <div class="title">Usage of Transition</div>
+        <div class="title">Transition, which works only at once.</div>
         <div class="overlay-container">
+          <div class="click-here" id="click-here1">click</div>
           <div class="box">
-            <div class="box1-main box1-transition" id="box1-main">click here!</div>
+            <div class="box1-main box1-transition box-click" id="box1-main-id">.box
+              <!-- <div class="click-here" id="click-here1">click here</div> -->
+            </div>
           </div>
           <div class="codebox explanation">
             <pre><code class="css code-format">
@@ -108,52 +114,58 @@
         </div>
       </div>
     </nav>
-  </div>
+  </div> <!-- overlay1 end -->
 
   <div id="overlay2" class="overlay">
     <span class="material-icons close" id="close2">close</span>
-    <nav class="overlay-container">
-      <div class="box">
-        <div class="box1-main box1">.box</div>
-      </div>
-      <div class="code1 explanation">
-        <div class="title">Usage transition</div>
-        <pre><code class="css">
-          .box {
-            width: 200px;
-            height: 200px;
-            background: #F4989C
-            transition-property: border-radius;
-            transition-duration: 2s
-            border-radius: 50%;
-          }
-        </code></pre>
-      </div>
-      <div class="code2 explanation">
-        <div class="title">Usage animation</div>
-        <pre><code class="css">
-          .box {
-            width: 200px;
-            height: 200px;
-            background: #F4989C;
-            border-radius: 5%;
-            animation-name: box-animation;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-          }
-
-          @keyframes box-animation {
-            0% {
-              transform: none;
-            }
-            100% {
-              border-radius: 50%;
-            }
-          }
-        </code></pre>
+    <nav>
+      <div class="overlay-layout">
+        <div class="title">Animation, which works as loop.</div>
+        <div class="overlay-container">
+          <div class="click-here" id="click-here2-anime">click</div>
+          <div class="box">
+            <div class="box2-main-anime" id="box2-main-anime">.box</div>
+          </div>
+          <div class="codebox explanation">
+            <pre><code class="css code-format">
+              .box {
+                animation-name: box-animation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite
+              }
+              @keyframes box-animation {
+                0% {
+                  transform: translate(-80px, -80px);
+                }
+                100% {
+                  transform: translate(80px, 80px);
+                }
+              }
+            </code></pre>
+          </div>
+        </div>
+        <div class="title">Transition, which works only at once.</div>
+        <div class="overlay-container">
+          <div class="click-here" id="click-here2">click</div>
+          <div class="box">
+            <div class="box2-main box2-transition box-click" id="box2-main-id">.box
+              <!-- <div class="click-here">click here</div> -->
+            </div>
+          </div>
+          <div class="codebox explanation">
+            <pre><code class="css code-format">
+              .box {
+                transform: translate(80px, 80px);
+                transition-property: transform;
+                transition-duration: 1s;
+              }
+            </code></pre>
+          </div>
+        </div>
       </div>
     </nav>
-  </div>
+  </div> <!-- overlay2 end -->
+
 
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js"></script>
   <script type="text/javascript" src="./js/bundle.js"></script>
