@@ -29,7 +29,7 @@
   <main>
     <div class="container wrapper grid">
       <div id="box1" class="item big-item">
-        <div class="box1-thumbnail box1"></div>
+        <div class="box1-thumbnail"></div>
       </div>
       <div id="box2" class="item">
         <div class="box2-thumbnail"></div>
@@ -70,7 +70,7 @@
       <div class="overlay-layout">
         <div class="title">Animation, which works as loop.</div>
         <div class="overlay-container">
-          <div class="click-here" id="click-here1-anime">click</div>
+          <div class="button" id="button-anime-1">start</div>
           <div class="box">
             <div class="box1-main" id="box1-main-anime">.box</div>
           </div>
@@ -79,8 +79,9 @@
               .box {
                 border-radius: 5%;
                 animation-name: box-animation;
-                animation-duration: 2s;
+                animation-duration: 1s;
                 animation-iteration-count: infinite;
+                animation-direction: alternate;
               }
     
               @keyframes box-animation {
@@ -96,17 +97,16 @@
         </div>
         <div class="title">Transition, which works only at once.</div>
         <div class="overlay-container">
-          <div class="click-here" id="click-here1">click</div>
+          <div class="button" id="button-transition-1">start</div>
           <div class="box">
-            <div class="box1-main box1-transition box-click" id="box1-main-id">.box
-              <!-- <div class="click-here" id="click-here1">click here</div> -->
+            <div class="box1-main box1-main-transition " id="box1-main-id">.box
             </div>
           </div>
           <div class="codebox explanation">
             <pre><code class="css code-format">
               .box {
                 transition-property: border-radius;
-                transition-duration: 2s
+                transition-duration: 1s;
                 border-radius: 50%;
               }
             </code></pre>
@@ -116,29 +116,32 @@
     </nav>
   </div> <!-- overlay1 end -->
 
+
+
   <div id="overlay2" class="overlay">
     <span class="material-icons close" id="close2">close</span>
     <nav>
       <div class="overlay-layout">
         <div class="title">Animation, which works as loop.</div>
         <div class="overlay-container">
-          <div class="click-here" id="click-here2-anime">click</div>
+          <div class="button" id="button-anime-2">start</div>
           <div class="box">
-            <div class="box2-main-anime" id="box2-main-anime">.box</div>
+            <div class="box2-main" id="box2-main-anime">.box</div>
           </div>
           <div class="codebox explanation">
             <pre><code class="css code-format">
               .box {
                 animation-name: box-animation;
-                animation-duration: 2s;
-                animation-iteration-count: infinite
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
               }
+    
               @keyframes box-animation {
                 0% {
-                  transform: translate(-80px, -80px);
                 }
                 100% {
-                  transform: translate(80px, 80px);
+                  transform: translate(120px, 120px);
                 }
               }
             </code></pre>
@@ -146,18 +149,17 @@
         </div>
         <div class="title">Transition, which works only at once.</div>
         <div class="overlay-container">
-          <div class="click-here" id="click-here2">click</div>
+          <div class="button" id="button-transition-2">start</div>
           <div class="box">
-            <div class="box2-main box2-transition box-click" id="box2-main-id">.box
-              <!-- <div class="click-here">click here</div> -->
+            <div class="box2-main box2-main-transition " id="box2-main-id">.box
             </div>
           </div>
           <div class="codebox explanation">
             <pre><code class="css code-format">
               .box {
-                transform: translate(80px, 80px);
                 transition-property: transform;
                 transition-duration: 1s;
+                transform: translate(120px, 120px);
               }
             </code></pre>
           </div>
@@ -165,6 +167,7 @@
       </div>
     </nav>
   </div> <!-- overlay2 end -->
+
 
 
   <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.1/build/highlight.min.js"></script>

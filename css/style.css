@@ -89,7 +89,6 @@ main {
 .grid .item {
   width: 100px;
   height: 100px;
-  /* background: whitesmoke; */
   background: #3aacad;
   opacity: .6;
   cursor: pointer;
@@ -151,7 +150,7 @@ main {
   margin: 0 20px 0 0;
 }
 
-.overlay .overlay-container .click-here {
+.overlay .overlay-container .button {
   font-family: Verdana, sans-serif;
   width: 50px;
   height: 50px;
@@ -166,20 +165,20 @@ main {
   box-shadow: 0 4px 0 #949393;
   user-select: none;
 }
-.overlay .overlay-container .click-here:hover {
+.overlay .overlay-container .button:hover {
   opacity: 0.9;
 }
-.overlay .overlay-container .click-here:active {
+.overlay .overlay-container .button:active {
 box-shadow: 0 2px 0 #949393;
 margin-top: 2px;
 }
 
 .overlay.show .overlay-container .box {
-  background: red;
   margin: 0 10px;
   opacity: 1;
   transform: none;
   transition-delay: .4s;
+  font-family: Verdana, sans-serif;
 }
 
 .overlay .overlay-container .codebox {
@@ -216,12 +215,13 @@ margin-top: 2px;
   justify-content: flex-start; /* 開始位置を配置。中央揃え*/
   align-items: flex-start; /* 親要素の開始位置から配置。上揃え。*/
   margin-bottom: 50px;
+  height: 250px;
 }
 
 .overlay .overlay-container .explanation {
   text-align: left;
 }
 .overlay .overlay-container .code-format {
-  height: 400px;
+  height: 250px;
 }
 /* ポップアップ画面 end */
