@@ -126,13 +126,23 @@ main {
   margin: 10px auto;
   max-width: 900px;
 }
+.overlay .overlay-container {
+  background: #74ccce;
+  padding: 5px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-start; /* 開始位置を配置。中央揃え*/
+  align-items: flex-start; /* 親要素の開始位置から配置。上揃え。*/
+  margin-bottom: 30px;
+  height: 280px;
+}
 
 .overlay .title {
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
-  height: 80px;
-  margin: 10px -30px;
+  height: 50px;
+  margin: 5px -30px;
   /* margin-left: 80px; */
   /* margin-bottom: 20px; */
 }
@@ -209,19 +219,13 @@ margin-top: 2px;
   transform: none;
   transition-delay: .2s;
 }
-.overlay .overlay-container {
-  margin: auto;
-  display: flex;
-  justify-content: flex-start; /* 開始位置を配置。中央揃え*/
-  align-items: flex-start; /* 親要素の開始位置から配置。上揃え。*/
-  margin-bottom: 50px;
-  height: 250px;
-}
+
 
 .overlay .overlay-container .explanation {
   text-align: left;
 }
 .overlay .overlay-container .code-format {
   height: 250px;
+  background: #b2ebec;
 }
 /* ポップアップ画面 end */
