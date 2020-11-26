@@ -113,26 +113,26 @@ main {
   right: 5%;
   left: 5%;
   /* background: rgba(255, 255, 255, 0.95); */
-  background: #3aacad;
+  /* background: #3aacad; */
+  background: #8ac9ca;
   text-align: center;
   padding: 64px;
   opacity: 0; /* 非表示 */
   transform: translateY(20px);
   transition: opacity .3s, transform .3s;
   pointer-events: none; /* ポップアップを非表示にした後で、後ろの文字が選択できるようにします。 */
-  transition: opacity .6s;
 }
 .overlay .overlay-layout {
   margin: 10px auto;
   max-width: 900px;
 }
 .overlay .overlay-container {
-  background: #74ccce;
+  /* background: #74ccce; */
   padding: 5px;
-  margin: auto;
+  /* margin: auto; */
   display: flex;
-  justify-content: flex-start; /* 開始位置を配置。中央揃え*/
-  align-items: flex-start; /* 親要素の開始位置から配置。上揃え。*/
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 30px;
   height: 280px;
 }
@@ -147,19 +147,17 @@ main {
   /* margin-bottom: 20px; */
 }
 
-.overlay .overlay-container .box {
-  /* position: relative; */
-  margin-top: 24px;
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .3s, transform .3s;
 
-  min-width: 210px;
-  max-width: 210px;
-  height: 200px;
-  margin: 0 20px 0 0;
+
+.button-layout {
+  background: #3aacad;
+  height: 250px;
+  padding: 10px 0 0 10px;
+  box-sizing: border-box;
 }
-
+/* .box-layout {
+  background: red;
+} */
 .overlay .overlay-container .button {
   font-family: Verdana, sans-serif;
   width: 50px;
@@ -183,8 +181,23 @@ box-shadow: 0 2px 0 #949393;
 margin-top: 2px;
 }
 
+.overlay .overlay-container .box {
+  /* position: relative; */
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
+  min-width: 310px;
+  max-width: 310px;
+  height: 250px;
+  background: #3aacad;
+  padding: 10px 0 0 10px;
+  box-sizing: border-box;
+}
 .overlay.show .overlay-container .box {
-  margin: 0 10px;
+  /* margin: 0 10px; */
+  margin: 0 10px 0 0;
   opacity: 1;
   transform: none;
   transition-delay: .4s;
@@ -199,7 +212,7 @@ margin-top: 2px;
 
   width: 500px;
   height: 400px;
-  margin: 0 20px 0 0
+  margin: 0 20px 0 0;
 }
 .overlay.show .overlay-container .codebox {
   opacity: 1;
@@ -228,4 +241,5 @@ margin-top: 2px;
   height: 250px;
   background: #b2ebec;
 }
+
 /* ポップアップ画面 end */
