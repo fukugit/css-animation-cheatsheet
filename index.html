@@ -69,15 +69,15 @@
     <span class="material-icons close" id="close1">close</span>
     <nav>
       <div class="overlay-layout">
-        <div class="title">Animation, which works as loop.</div>
+        <div class="overlay-title">Animation, which works as loop.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-anime-1">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box1-main" id="box1-main-anime">.box</div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
                 border-radius: 5%;
@@ -98,16 +98,16 @@
             </code></pre>
           </div>
         </div>
-        <div class="title">Transition, which works only at once.</div>
+        <div class="overlay-title">Transition, which works only at once.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-transition-1">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box1-main box1-main-transition " id="box1-main-id">.box
             </div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
                 transition-property: border-radius;
@@ -127,15 +127,15 @@
     <span class="material-icons close" id="close2">close</span>
     <nav>
       <div class="overlay-layout">
-        <div class="title">Animation, which works as loop.</div>
+        <div class="overlay-title">Animation, which works as loop.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-anime-2">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box2-main" id="box2-main-anime">.box</div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
                 animation-name: box-animation;
@@ -148,22 +148,22 @@
                 0% {
                 }
                 100% {
-                  transform: translate(120px, 120px);
+                  transform: translate(240px, 180px);
                 }
               }
             </code></pre>
           </div>
         </div>
-        <div class="title">Transition, which works only at once.</div>
+        <div class="overlay-title">Transition, which works only at once.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-transition-2">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box2-main box2-main-transition " id="box2-main-id">.box
             </div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
                 transition-property: transform;
@@ -182,50 +182,48 @@
     <span class="material-icons close" id="close3">close</span>
     <nav>
       <div class="overlay-layout">
-        <div class="title">Animation, which works as loop.</div>
+        <div class="overlay-title">Animation, which works as loop.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-anime-3">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box3-main" id="box3-main-anime">.box</div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
                 animation-name: box-animation;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
-                transform: translate(150px, 0px);
               }
     
               @keyframes box-animation {
                 0% {
                 }
                 100% {
-                  transform: translate(0px, 150px);
+                  transform: translate(-240px, 180px);
                 }
               }
             </code></pre>
           </div>
         </div>
-        <div class="title">Transition, which works only at once.</div>
+        <div class="overlay-title">Transition, which works only at once.</div>
         <div class="overlay-container">
           <div class="button-layout">
             <div class="button" id="button-transition-3">start</div>
           </div>
-          <div class="box">
+          <div class="box-layout">
             <div class="box3-main box3-main-transition " id="box3-main-id">.box
             </div>
           </div>
-          <div class="codebox explanation">
+          <div class="codebox-layout">
             <pre><code class="css code-format">
               .box {
-                transform: translate(150px, 0px);
                 transition-property: transform;
                 transition-duration: 1s;
-                transform: translate(0px, 150px);
+                transform: translate(-240px, 180px);
               }
             </code></pre>
           </div>
