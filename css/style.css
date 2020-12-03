@@ -63,7 +63,6 @@ h1 {
   color: #686464d5;
 }
 main {
-  /* min-height: 100vh;  */
   min-width: 1000px;
   background: #fff;
 
@@ -122,14 +121,12 @@ main {
   transition: opacity .3s, transform .3s;
   pointer-events: none; /* ポップアップを非表示にした後で、後ろの文字が選択できるようにします。 */
 }
-.overlay .overlay-layout {
+.overlay-layout {
   margin: 10px auto;
   max-width: 900px;
 }
-.overlay .overlay-container {
-  /* background: #74ccce; */
+.overlay-container {
   padding: 5px;
-  /* margin: auto; */
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -137,28 +134,34 @@ main {
   height: 280px;
 }
 
-.overlay .title {
+.overlay-title {
   font-size: 2rem;
   color: #ffffff;
   text-align: left;
   height: 50px;
   margin: 5px -30px;
-  /* margin-left: 80px; */
-  /* margin-bottom: 20px; */
 }
 
-
-
 .button-layout {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+
   background: #3aacad;
   height: 250px;
   padding: 10px 0 0 10px;
   box-sizing: border-box;
 }
-/* .box-layout {
-  background: red;
-} */
-.overlay .overlay-container .button {
+.show .button-layout {
+  margin: 0 0 0 0;
+  opacity: 1;
+  transform: none;
+  transition-delay: .4s;
+  /* font-family: Verdana, sans-serif; */
+}
+
+.button {
   font-family: Verdana, sans-serif;
   width: 50px;
   height: 50px;
@@ -173,16 +176,16 @@ main {
   box-shadow: 0 4px 0 #949393;
   user-select: none;
 }
-.overlay .overlay-container .button:hover {
+.button:hover {
   opacity: 0.9;
 }
-.overlay .overlay-container .button:active {
+.button:active {
 box-shadow: 0 2px 0 #949393;
 margin-top: 2px;
 }
 
-.overlay .overlay-container .box {
-  /* position: relative; */
+.box-layout {
+  position: relative;
   margin-top: 24px;
   opacity: 0;
   transform: translateY(16px);
@@ -195,8 +198,7 @@ margin-top: 2px;
   padding: 10px 0 0 10px;
   box-sizing: border-box;
 }
-.overlay.show .overlay-container .box {
-  /* margin: 0 10px; */
+.show .box-layout {
   margin: 0 10px 0 0;
   opacity: 1;
   transform: none;
@@ -204,7 +206,7 @@ margin-top: 2px;
   font-family: Verdana, sans-serif;
 }
 
-.overlay .overlay-container .codebox {
+.codebox-layout {
   margin-top: 24px;
   opacity: 0;
   transform: translateY(16px);
@@ -213,31 +215,29 @@ margin-top: 2px;
   width: 500px;
   height: 400px;
   margin: 0 20px 0 0;
+  text-align: left;
 }
-.overlay.show .overlay-container .codebox {
+.show .codebox-layout {
   opacity: 1;
   transform: none;
   transition-delay: .6s;
 }
-.overlay .close {
+.close {
   position: absolute;
   top: 16px;
   right: 16px;
   font-size: 32px;
   cursor: pointer;
 }
-.overlay.show {
+/* ポップアップ画面を表示させるクラスです。 */
+.show {
   opacity: 1;
   pointer-events: auto;
   transform: none;
   transition-delay: .2s;
 }
 
-
-.overlay .overlay-container .explanation {
-  text-align: left;
-}
-.overlay .overlay-container .code-format {
+.code-format {
   height: 250px;
   background: #b2ebec;
 }
