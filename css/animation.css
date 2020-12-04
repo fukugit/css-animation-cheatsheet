@@ -29,7 +29,7 @@
   user-select: none;
   border-radius: 5%;
 }
-.box1-main-animate {
+.box1-main-animation {
   border-radius: 5%;
   animation-name: box1-animation;
   animation-duration: 1s;
@@ -93,7 +93,7 @@
   user-select: none;
   border-radius: 5%;
 }
-.box2-main-animate {
+.box2-main-animation {
   animation-name: box2-animation2;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -158,7 +158,7 @@
   user-select: none;
   border-radius: 5%;
 }
-.box3-main-animate {
+.box3-main-animation {
   animation-name: box3-animation2;
   animation-duration: 1s;
   animation-iteration-count: infinite;

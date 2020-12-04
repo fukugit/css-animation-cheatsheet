@@ -7,35 +7,33 @@ var hljs = require('highlight.js');
 hljs.initHighlightingOnLoad();
 
 {
-  const box1 = document.getElementById('box1');
+  const thumbnailBbox1 = document.getElementById('box1');
   const overlay1 = document.getElementById('overlay1');
   const close1 = document.getElementById('close1');
-  const boxmainid1 = document.getElementById('box1-main-id');
-  const buttonanime1 = document.getElementById('button-anime-1');
-  const buttontran1 = document.getElementById('button-transition-1');
-  const box1mainanime = document.getElementById('box1-main-anime');
+  const boxmainid1 = document.getElementById('box1-main-id-transition');
+  const box1mainanime = document.getElementById('box1-main-id-animation');
+  const buttonForAnimation1 = document.getElementById('button-animation-1');
+  const buttonForTransition1 = document.getElementById('button-transition-1');
   
-  box1.addEventListener('click', () => {
+  thumbnailBbox1.addEventListener('click', () => {
     overlay1.classList.add('show');
-    box1.classList.add('hide');
   });
   close1.addEventListener('click', () => {
     overlay1.classList.remove('show');
-    box1.classList.remove('hide');
   });
-  buttonanime1.addEventListener("click", () => {
-    box1mainanime.classList.toggle("box1-main-animate");
-    const label = buttonanime1.textContent;
+  buttonForAnimation1.addEventListener("click", () => {
+    box1mainanime.classList.toggle("box1-main-animation");
+    const label = buttonForAnimation1.textContent;
     if (label === 'start') {
-      document.getElementById('button-anime-1').textContent = 'stop';
+      document.getElementById('button-animation-1').textContent = 'stop';
     } else if (label === 'stop') {
-      document.getElementById('button-anime-1').textContent = 'start';
+      document.getElementById('button-animation-1').textContent = 'start';
     }
   });
   boxmainid1.addEventListener("click", () => {
     boxmainid1.classList.toggle("box1-main-transition-additional");
   });
-  buttontran1.addEventListener("click", () => {
+  buttonForTransition1.addEventListener("click", () => {
     boxmainid1.classList.toggle("box1-main-transition-additional");
   });
 
@@ -56,7 +54,7 @@ hljs.initHighlightingOnLoad();
     box2.classList.remove('hide');
   });
   buttonanime2.addEventListener("click", () => {
-    box2mainanime.classList.toggle("box2-main-animate");
+    box2mainanime.classList.toggle("box2-main-animation");
     const label = buttonanime2.textContent;
     if (label === 'start') {
       document.getElementById('button-anime-2').textContent = 'stop';
@@ -89,7 +87,7 @@ hljs.initHighlightingOnLoad();
     box3.classList.remove('hide');
   });
   buttonanime3.addEventListener("click", () => {
-    box3mainanime.classList.toggle("box3-main-animate");
+    box3mainanime.classList.toggle("box3-main-animation");
     const label = buttonanime3.textContent;
     if (label === 'start') {
       document.getElementById('button-anime-3').textContent = 'stop';
