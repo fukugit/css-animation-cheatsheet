@@ -45,7 +45,6 @@
   }
 }
 .box1-main-transition {
-  cursor: pointer;
   transition-property: border-radius;
   transition-duration: 1s;
 }

@@ -9,8 +9,8 @@ hljs.initHighlightingOnLoad();
   const thumbnailBbox1 = document.getElementById('box1');
   const overlay1 = document.getElementById('overlay1');
   const close1 = document.getElementById('close1');
-  const boxmainid1 = document.getElementById('box1-main-id-transition');
-  const box1mainanime = document.getElementById('box1-main-id-animation');
+  const boxForAnimation1 = document.getElementById('box1-main-id-animation');
+  const boxForTransition1 = document.getElementById('box1-main-id-transition');
   const buttonForAnimation1 = document.getElementById('button-animation-1');
   const buttonForTransition1 = document.getElementById('button-transition-1');
   
@@ -21,7 +21,7 @@ hljs.initHighlightingOnLoad();
     overlay1.classList.remove('show');
   });
   buttonForAnimation1.addEventListener("click", () => {
-    box1mainanime.classList.toggle("box1-main-animation");
+    boxForAnimation1.classList.toggle("box1-main-animation");
     const label = buttonForAnimation1.textContent;
     if (label === 'start') {
       document.getElementById('button-animation-1').textContent = 'stop';
@@ -29,12 +29,35 @@ hljs.initHighlightingOnLoad();
       document.getElementById('button-animation-1').textContent = 'start';
     }
   });
-  boxmainid1.addEventListener("click", () => {
-    boxmainid1.classList.toggle("box1-main-transition-additional");
-  });
   buttonForTransition1.addEventListener("click", () => {
-    boxmainid1.classList.toggle("box1-main-transition-additional");
+    boxForTransition1.classList.toggle("box1-main-transition-additional");
   });
+
+
+  // let codes = [
+  //   {animation: "aaa",
+  //    transition: "sss"},
+  // ];
+
+  // let overlays = document.getElementById('overlays');
+  // let idcounter = 1;
+  // codes.forEach(code => {
+  //   let overlay = document.createElement('div'); 
+  //   overlay.id = 'overlay' + idcounter; 
+  //   overlay.classList.add("overlay");
+
+  //   let close = document.createElement('span');
+  //   close.id = 'close' + idcounter;
+  //   close.classList.add('material-icons');
+  //   close.classList.add('close');
+
+  //   overlay.appendChild(close);
+  //   overlays.appendChild(overlay);
+  //   idcounter++;
+  // });
+
+
+
 
   const box2 = document.getElementById('box2');
   const overlay2 = document.getElementById('overlay2');
